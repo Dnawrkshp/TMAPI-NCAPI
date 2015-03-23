@@ -1,0 +1,5 @@
+C:\Users\Dan\Documents\Visual Studio 2012\Projects\NetCheatPS3\TMAPI-NCAPI\obj\Debug\TMAPI-NCAPI.csprojResolveAssemblyReference.cache
+C:\Users\Dan\Documents\Visual Studio 2012\Projects\NetCheatPS3\NetCheatPS3\bin\x86\Debug\APIs\TMAPI-NCAPI.dll
+C:\Users\Dan\Documents\Visual Studio 2012\Projects\NetCheatPS3\NetCheatPS3\bin\x86\Debug\APIs\TMAPI-NCAPI.pdb
+C:\Users\Dan\Documents\Visual Studio 2012\Projects\NetCheatPS3\TMAPI-NCAPI\obj\Debug\TMAPI-NCAPI.dll
+C:\Users\Dan\Documents\Visual Studio 2012\Projects\NetCheatPS3\TMAPI-NCAPI\obj\Debug\TMAPI-NCAPI.pdb
