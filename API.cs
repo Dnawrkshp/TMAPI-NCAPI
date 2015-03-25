@@ -2,12 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using NCAppInterface;
 
 namespace TMAPI_NCAPI
 {
     public class API : IAPI
     {
+
+        [DllImport("user32.dll")]
+        internal static extern IntPtr SetForegroundWindow(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        internal static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);
 
         public API()
 		{
@@ -208,6 +217,40 @@ namespace TMAPI_NCAPI
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Called by user.
+        /// Should display options for the API.
+        /// Can be used for other things.
+        /// </summary>
+        public void Configure()
+        {
+            string path1 = @"C:\Program Files (x86)\SN Systems\PS3\bin";
+            string path2 = @"C:\Program Files\SN Systems\PS3\bin";
+
+            string file1 = path1 + "\\ps3tm.exe";
+            string file2 = path2 + "\\ps3tm.exe";
+
+
+            if (Directory.Exists(path1) && File.Exists(file1))
+            {
+                OpenFileEXE(file1);
+            }
+            else if (Directory.Exists(path2) && File.Exists(file2))
+            {
+                OpenFileEXE(file2);
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("PS3TMAPI not installed! Failed to open Target Manager.");
+            }
+
+        }
+
+        private void OpenFileEXE(string path)
+        {
+            Process.Start(path);
         }
 
         /// <summary>
